@@ -108,15 +108,15 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Image src={LogoImageBeta} className='h-13 w-auto' alt={''} />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#why">Why</NavLink>
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
-              <NavLink href="#faq">FAQ</NavLink>
+              <NavLink href="/#why">Why</NavLink>
+              <NavLink href="/#features">Features</NavLink>
+              <NavLink href="/#testimonials">Testimonials</NavLink>
+              <NavLink href="/#pricing">Pricing</NavLink>
+              <NavLink href="/#faq">FAQ</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
