@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <Container className="pt-20 pb-16 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-white sm:text-7xl">
-        Execution{' '}
+        Trading{' '}
         <span className="relative whitespace-nowrap text-[#3f4bf2]">
           <svg
             aria-hidden="true"
@@ -28,10 +28,10 @@ export function Hero() {
         for consistent results.
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-white">
-        Smarter decisions, seamless execution with Pipvaro across every market.
+        AI-driven bots place the winning trades for you—risk-aware, rules-first, 24/7. Manage and fine-tune everything from a clean dashboard.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Get started for free</Button>
+        <Button href="/register">Start free with Fusion</Button>
         <Button
           href="#"
           variant="outline"
@@ -42,12 +42,12 @@ export function Hero() {
           >
             <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
           </svg>
-          <span className="ml-3">Watch video</span>
+          <span className="ml-3">Watch demo</span>
         </Button>
       </div>
       <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-white">
-          Possible with any broker of your choice 
+          Works with your broker of choice 
         </p>
         <ul
           role="list"

@@ -125,54 +125,52 @@ export function Pricing() {
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-[#3f4bf2]/70" />
               <span className="relative">Simple pricing,</span>
             </span>{' '}
-            for everyone.
+            for every trader.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your capital is, our software will
-            work well for you.
+            Founder pricing locked for the first 100 members. Billed monthly via Stripe. Cancel anytime.
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Pipvaro Fusion "
-            price="$0"
-            description="Good for anyone who is self-employed and just getting started."
+            price="$0 / month"
+            description="Free · XAUUSD only"
             href="/register"
             features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
+              'Prebuilt bot preset for XAUUSD',
+              'Limited daily bot executions',
+              'Core dashboard & live reporting',
+              'SL/TP, breakeven & trailing controls',
+              'Community support',
             ]}
           />
           <Plan
             featured
             name="Pipvaro Nova"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
+            price="$69 / month"
+            description="Beta · Hosting included · Priority support"
             href="/register"
             features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
+              'All markets: FX, metals & indices',
+              'Highest frequency bots with pro filters & regime switching',
+              'Detailed reporting',
+              'Hosting included: Windows VPS (24/7, RDP; multi-instance on request)',
+              'Full setup included',
+              'Priority support (≤24h)',
             ]}
           />
           <Plan
             name="Pipvaro Lunar"
             price="$39"
-            description="For even the biggest enterprise companies."
+            description="Beta · Hosting included"
             href="/register"
             features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
+              'FX majors & metals',
+              'Increased daily bot executions',
+              'Adaptive risk management',
+              'Hosting included: Windows VPS (24/7, RDP)',
+              'Standard support (24–48h)',
             ]}
           />
         </div>

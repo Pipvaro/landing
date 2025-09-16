@@ -20,10 +20,10 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    name: 'Live reporting',
+    summary: 'Real-time equity, balance, margin—always in view.',
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+      'Auto-refreshing charts and snapshots show performance at a glance. Inspect account changes, open positions and execution logs when you need detail.',
     image: screenshotProfitLoss,
     icon: function ReportingIcon() {
       let id = useId()
@@ -54,11 +54,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Inventory',
+    name: 'Risk & limits',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      'Cap daily risk and positions with built-in guardrails.',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
+      'Set daily/max drawdown %, max open trades (global & per symbol) and time windows around news. Bots pause automatically—rules come first.',
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -82,11 +82,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Contacts',
+    name: 'Bot rules',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Define how orders behave—SL/TP, breakeven, trailing.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'Pick fixed or from bot SL/TP, breakeven on TP hit, optional trailing. Choose units (pips/%) and volume per TP, then save as presets for any receiver.',
     image: screenshotContacts,
     icon: function ContactsIcon() {
       return (
@@ -234,11 +234,10 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Simplify everyday business tasks.
+            Simplify everyday trading ops.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-gray-400/80">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            You shouldn’t babysit charts. The dashboard keeps your bots compliant, fast, and under control.
           </p>
         </div>
         <FeaturesMobile />

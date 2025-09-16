@@ -2,57 +2,58 @@ import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/pv-gradient.png'
+import Link from 'next/link'
 
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'Which platforms and brokers are supported?',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        'MT5 today (MT4/cTrader on the roadmap). Works with any broker that supports MT5 via our Receiver app.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question: 'Do I need my own VPS?',
+      answer: 'Not on Lunar/Nova—hosting is included (Windows VPS, 24/7, RDP). Fusion has no hosting; you can run the receiver on your own PC/VPS.',
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'Is this ok for prop-firm accounts?',
       answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+        'Yes. Daily/max drawdown caps, max open trades per symbol, news windows and time filters help you stay within rules.',
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'Can I start on demo or free?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'Absolutely. Fusion is free (XAUUSD only) and great for demo/testing. Upgrade anytime to unlock more markets and higher bot frequency.',
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'How many markets can I trade on each plan?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+        'Fusion: XAUUSD only. Lunar: FX majors & metals. Nova: FX, metals & indices.',
     },
     {
       question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+        'Can I pause the bot or intervene manually?',
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'Yes—pause/resume per receiver with one click. You can still manage or close trades in your broker terminal at any time.',
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
+      question: 'How does risk management work?',
       answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+        'Set daily/max drawdown %, max positions (global & per symbol), SL/TP modes, breakeven and optional trailing. The bot will follow your rules.',
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
+      question: 'Is my data and access secure?',
+      answer: 'Your broker/API credentials stay on your receiver. Config and logs are stored securely; traffic is encrypted. You can revoke a receiver anytime.',
     },
     {
-      question: 'I lost my password, how do I get into my account?',
+      question: 'How do billing, taxes and cancellations work?',
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        'Monthly via Stripe. Founder pricing is locked for the first 100 members. VAT is added where required. Cancel or change plans anytime.',
     },
   ],
 ]
@@ -80,8 +81,7 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-gray-400/80">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            Answers to the most common questions about our bots, plans, and setup. Can’t find yours? <Link className="text-white" href="mailto:support@pipvaro.com">Contact</Link> support—we’ll help fast.
           </p>
         </div>
         <ul

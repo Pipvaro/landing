@@ -21,13 +21,13 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Ready to change your life?
+            Ready to automate <br></br>your trading?
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
-            Get started below and start your journey to <br></br>financial freedom today!
+            Launch your first bot in minutes—manage, monitor<br></br> and pause from one dashboard.
           </p>
           <Button href="/register" color="white" className="mt-10">
-            Get started for free
+            Start free with Fusion
           </Button>
         </div>
       </Container>

@@ -14,6 +14,7 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import LogoImage from '@/images/logos/logo.png'
+import LogoImageBeta from '@/images/logos/logo-beta.svg'
 import Image from 'next/image'
 
 
@@ -107,7 +108,7 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
-              <Image src={LogoImage} className='h-13 w-auto' alt={''} />
+              <Image src={LogoImageBeta} className='h-13 w-auto' alt={''} />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Why</NavLink>

@@ -16,25 +16,25 @@ const features = [
   {
     title: 'Dashboard',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "At-a-glance health for your accounts and bots: equity, balance, margin, open positions and live reporting. Real-time bot feed with executions, edits and alerts.",
     image: screenshotDashboard,
   },
   {
     title: 'Accounts',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "Auto-discovered by the receiver and kept in sync. See balances and snapshots, margin usage and change logs—no spreadsheets, no manual work.",
     image: screenshotAccounts,
   },
   {
     title: 'Receivers',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "Where the automation lives. Set allowed symbols, risk caps, max open trades and news window; choose SL/TP modes, breakeven and trailing. License status and last-seen included.",
     image: screenshotVatReturns,
   },
   {
     title: 'Economic Calendar',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      'Built-in high-impact calendar powers the news filter. Automatically pause trading before/after events per receiver—fully time-zone aware.',
     image: screenshotReceivers,
   },
 ]
@@ -79,7 +79,7 @@ export function PrimaryFeatures() {
             Everything you need to manage your trades.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            From the dashboard with an overview of trades to the settings for the respective receivers. 
+            Control every bot from one clean console—live P/L, rules, and risk all in one place.
           </p>
         </div>
         <TabGroup
