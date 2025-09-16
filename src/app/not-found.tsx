@@ -1,15 +1,16 @@
 import Link from 'next/link'
 
 import { Button } from '@/components/Button'
-import { Logo } from '@/components/Logo'
 import { SlimLayout } from '@/components/SlimLayout'
+import LogoImage from '@/images/logos/logo2.svg'
+import Image from 'next/image'
 
 export default function NotFound() {
   return (
     <SlimLayout>
       <div className="flex">
         <Link href="/" aria-label="Home">
-          <Logo className="h-10 w-auto" />
+           <Image src={LogoImage} className="mx-auto h-20 w-auto" alt="" />
         </Link>
       </div>
       <p className="mt-20 text-sm font-medium text-gray-700">404</p>

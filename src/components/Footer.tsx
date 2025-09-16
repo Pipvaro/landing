@@ -3,13 +3,16 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import LogoImage from '@/images/logos/logo.png'
+import Image from 'next/image'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="bg-[#1e2122]">
       <Container>
         <div className="py-16">
-          <Logo className="mx-auto h-10 w-auto" />
+          <Image src={LogoImage} className="mx-auto h-13 w-auto" alt="" />
+
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
               <NavLink href="#features">Features</NavLink>
@@ -18,9 +21,10 @@ export function Footer() {
             </div>
           </nav>
         </div>
+
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
-            <Link href="#" className="group" aria-label="TaxPal on X">
+            <Link href="#" className="group" aria-label="Pipvaro on X">
               <svg
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
                 aria-hidden="true"
@@ -29,7 +33,7 @@ export function Footer() {
                 <path d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z" />
               </svg>
             </Link>
-            <Link href="#" className="group" aria-label="TaxPal on GitHub">
+            <Link href="#" className="group" aria-label="Pipvaro on GitHub">
               <svg
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
                 aria-hidden="true"
@@ -39,11 +43,40 @@ export function Footer() {
               </svg>
             </Link>
           </div>
+
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} TaxPal. All rights
+            Copyright &copy; {new Date().getFullYear()} Pipvaro. All rights
             reserved.
           </p>
         </div>
+
+        {/* --- Disclaimer bar (small, grey, centered) --- */}
+        <div className="px-4 pb-12">
+          <div className="mx-auto max-w-5xl text-center">
+            <p className="text-[11px] leading-5 text-slate-500">
+              <span className="font-semibold">Disclaimer:</span> By using
+              <span className="px-1 font-medium">Pipvaro</span> you agree that we
+              are not a broker and do not provide financial, investment, tax or
+              legal advice. Trading (incl. forex/CFDs/crypto/futures) involves
+              high risk and can result in loss of all capital. No guarantees of
+              profit, uptime, data accuracy, or execution are provided. You are
+              responsible for complying with your local laws and for any
+              third-party accounts you use. Purchases are final unless required
+              by law. This notice may change without prior notice.
+            </p>
+            <p className="mt-2 text-[11px] leading-5 text-slate-500">
+              Contact:{" "}
+              <a
+                href="mailto:support@pipvaro.com"
+                className="underline decoration-slate-400/50 hover:decoration-slate-300"
+              >
+                support@pipvaro.com
+              </a>
+              {" "}| Last updated: {new Date().toLocaleDateString()}
+            </p>
+          </div>
+        </div>
+        {/* --- /Disclaimer bar --- */}
       </Container>
     </footer>
   )

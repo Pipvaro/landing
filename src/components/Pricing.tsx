@@ -69,7 +69,7 @@ function Plan({
     <section
       className={clsx(
         'flex flex-col rounded-3xl px-6 sm:px-8',
-        featured ? 'order-first bg-blue-600 py-8 lg:order-0' : 'lg:py-8',
+        featured ? 'order-first bg-[#3f4bf2] py-8 lg:order-0' : 'lg:py-8',
       )}
     >
       <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
@@ -116,26 +116,26 @@ export function Pricing() {
     <section
       id="pricing"
       aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
+      className="bg-[#1e2122] py-20 sm:py-32"
     >
       <Container>
         <div className="md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" />
+              <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-[#3f4bf2]/70" />
               <span className="relative">Simple pricing,</span>
             </span>{' '}
             for everyone.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software won’t
+            It doesn’t matter what size your capital is, our software will
             work well for you.
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Starter"
-            price="$9"
+            name="Pipvaro Fusion "
+            price="$0"
             description="Good for anyone who is self-employed and just getting started."
             href="/register"
             features={[
@@ -148,7 +148,7 @@ export function Pricing() {
           />
           <Plan
             featured
-            name="Small business"
+            name="Pipvaro Nova"
             price="$15"
             description="Perfect for small / medium sized businesses."
             href="/register"
@@ -163,7 +163,7 @@ export function Pricing() {
             ]}
           />
           <Plan
-            name="Enterprise"
+            name="Pipvaro Lunar"
             price="$39"
             description="For even the biggest enterprise companies."
             href="/register"

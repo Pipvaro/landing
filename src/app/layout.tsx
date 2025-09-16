@@ -6,12 +6,22 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: 'Pipvaro | Trading, Automated.',
+    default: 'Pipvaro | Trading, Automated.',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Smarter decisions, seamless execution with Pipvaro across every market.',
+      icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png' },
+    ],
+  }
 }
+
 
 const inter = Inter({
   subsets: ['latin'],
