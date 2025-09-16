@@ -90,12 +90,13 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-[#1e2122]  p-4 text-lg tracking-tight text-white shadow-xl ring-1 ring-slate-900/5 data-closed:scale-95 data-closed:opacity-0 data-enter:duration-150 data-enter:ease-out data-leave:duration-100 data-leave:ease-in"
       >
-        <MobileNavLink href="#features">Why</MobileNavLink>
-        <MobileNavLink href="#testimonials">How</MobileNavLink>
+        <MobileNavLink href="#why">Why</MobileNavLink>
+        <MobileNavLink href="#features">Features</MobileNavLink>
         <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
         <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+        <MobileNavLink href="#faq">FAQ</MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
-        <MobileGetStarted href="/login">Get started</MobileGetStarted>
+        <MobileGetStarted href="https://app.pipvaro.com">Get started / Login</MobileGetStarted>
       </PopoverPanel>
     </Popover>
   )
@@ -111,17 +112,18 @@ export function Header() {
               <Image src={LogoImageBeta} className='h-13 w-auto' alt={''} />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Why</NavLink>
-              <NavLink href="#testimonials">How</NavLink>
+              <NavLink href="#why">Why</NavLink>
+              <NavLink href="#features">Features</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
               <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#faq">FAQ</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/login">Login</NavLink>
+              <NavLink href="https://app.pipvaro.com">Login</NavLink>
             </div>
-            <Button href="/register" color="blue">
+            <Button href="https://app.pipvaro.com" color="blue">
               <span>
                 Get started 
               </span>

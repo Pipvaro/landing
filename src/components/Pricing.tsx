@@ -136,7 +136,7 @@ export function Pricing() {
             name="Pipvaro Fusion "
             price="$0 / month"
             description="Free · XAUUSD only"
-            href="/register"
+            href="https://app.pipvaro.com/register"
             features={[
               'Prebuilt bot preset for XAUUSD',
               'Limited daily bot executions',
@@ -150,7 +150,7 @@ export function Pricing() {
             name="Pipvaro Nova"
             price="$69 / month"
             description="Beta · Hosting included · Priority support"
-            href="/register"
+            href="https://app.pipvaro.com/register"
             features={[
               'All markets: FX, metals & indices',
               'Highest frequency bots with pro filters & regime switching',
@@ -164,7 +164,7 @@ export function Pricing() {
             name="Pipvaro Lunar"
             price="$39"
             description="Beta · Hosting included"
-            href="/register"
+            href="https://app.pipvaro.com/register"
             features={[
               'FX majors & metals',
               'Increased daily bot executions',

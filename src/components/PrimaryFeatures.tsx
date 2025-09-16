@@ -61,17 +61,17 @@ export function PrimaryFeatures() {
 
   return (
     <section
-      id="features"
+      id="why"
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
       <Image
-        className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        className="absolute max-w-none"
         src={backgroundImage}
         alt=""
-        width={2245}
-        height={1636}
+
         unoptimized
+        fill
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">

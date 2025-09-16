@@ -31,7 +31,7 @@ export function Hero() {
         AI-driven bots place the winning trades for you—risk-aware, rules-first, 24/7. Manage and fine-tune everything from a clean dashboard.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Start free with Fusion</Button>
+        <Button href="https://app.pipvaro.com">Start free with Fusion</Button>
         <Button
           href="#"
           variant="outline"

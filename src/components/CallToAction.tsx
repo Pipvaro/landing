@@ -26,7 +26,7 @@ export function CallToAction() {
           <p className="mt-4 text-lg tracking-tight text-white">
             Launch your first bot in minutes—manage, monitor<br></br> and pause from one dashboard.
           </p>
-          <Button href="/register" color="white" className="mt-10">
+          <Button href="https://app.pipvaro.com" color="white" className="mt-10">
             Start free with Fusion
           </Button>
         </div>
