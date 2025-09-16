@@ -10,7 +10,7 @@ export function NavLink({
   return (
     <Link
       href={href}
-      className="inline-block rounded-lg px-2 py-1 text-sm text-white  hover:text-white/50"
+      className="inline-block rounded-lg px-2 py-1 text-sm text-white  hover:text-white/50 rounded-md"
     >
       {children}
     </Link>

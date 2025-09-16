@@ -15,15 +15,38 @@ export function Footer() {
 
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#features">Privacy Policy</NavLink>
+              <NavLink href="#testimonials">Terms of Service</NavLink>
             </div>
           </nav>
         </div>
 
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
+            {/* Discord (schärfere Variante) */}
+            <Link href="#" className="group" aria-label="Pipvaro on Discord">
+              <svg
+                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                shapeRendering="geometricPrecision"
+              >
+                <path d="M21.06 6.356A17.573 17.573 0 0 0 16.757 5c-.2.358-.43.83-.588 1.23A13.2 13.2 0 0 0 12 5.652c-1.625 0-3.188.28-4.668.803-.16-.4-.39-.872-.588-1.23A17.573 17.573 0 0 0 2.94 6.356 19.2 19.2 0 0 0 1 15.258c1.728 2.055 4.197 3.544 6.977 4.203.351-.48.663-.991.93-1.53-.51-.149-.996-.35-1.453-.592l.327-.248c2.768 1.287 5.89 1.287 8.657 0l.327.248c-.457.241-.943.443-1.453.592.267.539.58 1.049.93 1.53 2.78-.659 5.249-2.148 6.976-4.203a19.2 19.2 0 0 0-1.94-8.902ZM8.084 13.86c-.79 0-1.43-.741-1.43-1.653 0-.911.64-1.652 1.43-1.652.79 0 1.43.741 1.43 1.652 0 .912-.64 1.653-1.43 1.653Zm7.832 0c-.79 0-1.43-.741-1.43-1.653 0-.911.64-1.652 1.43-1.652.79 0 1.43.741 1.43 1.652 0 .912-.64 1.653-1.43 1.653Z" />
+              </svg>
+            </Link>
+
+            {/* Instagram */}
+            <Link href="#" className="group" aria-label="Pipvaro on Instagram">
+              <svg
+                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z" />
+              </svg>
+            </Link>
+
+            {/* X / Twitter */}
             <Link href="#" className="group" aria-label="Pipvaro on X">
               <svg
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
@@ -31,15 +54,6 @@ export function Footer() {
                 viewBox="0 0 24 24"
               >
                 <path d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z" />
-              </svg>
-            </Link>
-            <Link href="#" className="group" aria-label="Pipvaro on GitHub">
-              <svg
-                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z" />
               </svg>
             </Link>
           </div>
