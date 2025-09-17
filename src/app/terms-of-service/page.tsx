@@ -1,4 +1,3 @@
-// src/app/terms-of-service/page.tsx
 import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -81,9 +80,8 @@ export default function TermsOfService() {
               These Terms of Service (“<span className="text-white">Terms</span>”) govern your
               access to and use of <span className="text-white">Pipvaro</span> (the “Service”),
               including our web app, dashboard, hosted infrastructure, and downloadable receiver
-              software. “Pipvaro”, “we”, “us” means{' '}
-              <span className="text-white">[Company name/legal entity]</span>, registered at{' '}
-              <span className="text-white">[address]</span>. Contact:{' '}
+              software. “Pipvaro”, “we”, “us” means <span className="text-white">Pipvaro</span>.
+              Contact:{' '}
               <a href="mailto:legal@pipvaro.com" className={link}>
                 legal@pipvaro.com
               </a>
@@ -103,9 +101,9 @@ export default function TermsOfService() {
             </p>
             <ul className="mt-2 list-inside list-disc space-y-1">
               <li>
-                We are <span className="text-white">not</span> a broker, asset manager,
-                investment adviser, or signal-seller. We do not guarantee profit or performance
-                and we do not give personalized investment advice.
+                We are <span className="text-white">not</span> a broker, asset manager or investment 
+                adviser. We do not guarantee profit or performance and we do not
+                give personalized investment advice.
               </li>
               <li>
                 Trades are executed via your own broker connection (e.g., MetaTrader 5). You
@@ -182,14 +180,14 @@ export default function TermsOfService() {
               We grant you a limited, revocable, non-transferable license to install the receiver
               and use the Service for your own trading.
             </p>
-            <p className="mt-2">You may <span className="text-white">not</span>:</p>
+            <p className="mt-2">
+              You may <span className="text-white">not</span>:
+            </p>
             <ul className="mt-2 list-inside list-disc space-y-1">
               <li>resell, lease, or white-label without our permission,</li>
               <li>reverse engineer or attempt to access non-public code,</li>
               <li>circumvent security or usage limits,</li>
-              <li>
-                misuse the Service to violate law, exchange rules, or third-party rights.
-              </li>
+              <li>misuse the Service to violate law, exchange rules, or third-party rights.</li>
             </ul>
           </section>
 
@@ -205,8 +203,9 @@ export default function TermsOfService() {
           <section id="risk" className="scroll-mt-24">
             <h2 className="text-xl font-semibold text-white">9) Risk disclosure</h2>
             <p>
-              Trading leveraged products (FX, metals, indices) is <span className="text-white">high
-              risk</span>. Losses can exceed deposits. Past performance does not guarantee future
+              Trading leveraged products (FX, metals, indices) is <span className="text-white">
+                high risk
+              </span>. Losses can exceed deposits. Past performance does not guarantee future
               results. Automation can magnify both gains and losses and may behave unpredictably due
               to latency, liquidity, slippage, outages, bad data, news events, or your
               configuration. You must monitor your accounts and set appropriate risk limits.
@@ -260,10 +259,8 @@ export default function TermsOfService() {
               We are not liable for: (a) trading losses, lost profits, or indirect/consequential
               damages, (b) outages, slippage, or broker/API failures, (c) configuration mistakes or
               misuse. Our total liability for any claim is limited to the{' '}
-              <span className="text-white">
-                fees you paid to us in the 3 months
-              </span>{' '}
-              before the event (or €50 on the free plan).
+              <span className="text-white">fees you paid to us in the 3 months</span> before the
+              event (or $50 on the free plan).
             </p>
           </section>
 
@@ -287,10 +284,10 @@ export default function TermsOfService() {
             <h2 className="text-xl font-semibold text-white">17) Governing law &amp; disputes</h2>
             <p>
               If you reside in the <span className="text-white">EEA/UK</span>, these Terms are
-              governed by the laws of <span className="text-white">Germany</span>, and courts in{' '}
-              <span className="text-white">Berlin</span> have exclusive jurisdiction. If you reside
+              governed by the laws of <span className="text-white">Austria</span>, and courts in{' '}
+              <span className="text-white">Linz</span> have exclusive jurisdiction. If you reside
               elsewhere, the governing law is{' '}
-              <span className="text-white">[choose: Germany or your home state/country]</span>,
+              <span className="text-white">Austria (or your local non-conflict law)</span>,
               excluding conflict-of-law rules. Consumers retain any non-waivable rights under local
               law.
             </p>
@@ -303,7 +300,6 @@ export default function TermsOfService() {
               <a href="mailto:legal@pipvaro.com" className={link}>
                 legal@pipvaro.com
               </a>
-              <span className="block">Address: [Company address]</span>
             </p>
           </section>
 
