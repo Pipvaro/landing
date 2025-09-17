@@ -24,7 +24,7 @@ export function Footer() {
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             {/* Discord (schärfere Variante) */}
-            <Link href="#" className="group" aria-label="Pipvaro on Discord">
+            <Link href="https://discord.gg/rU9hbFDeaY" target="blank_" className="group" aria-label="Pipvaro on Discord">
               <svg
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
                 aria-hidden="true"
@@ -36,7 +36,7 @@ export function Footer() {
             </Link>
 
             {/* Instagram */}
-            <Link href="#" className="group" aria-label="Pipvaro on Instagram">
+            <Link href="https://instagram.com/pipvaro" target="_blank" className="group" aria-label="Pipvaro on Instagram">
               <svg
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
                 aria-hidden="true"
