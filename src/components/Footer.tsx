@@ -47,7 +47,7 @@ export function Footer() {
             </Link>
 
             {/* X / Twitter */}
-            <Link href="#" className="group" aria-label="Pipvaro on X">
+            <Link href="https://x.com/pipvaro" target="blank_" className="group" aria-label="Pipvaro on X">
               <svg
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
                 aria-hidden="true"
