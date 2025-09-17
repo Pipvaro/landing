@@ -22,7 +22,7 @@ const testimonials = [
       content:
         'Setup on demo took one evening. Breakeven on TP hit + fixed SL/TP works exactly as I expect. Nice to finally have control without the grind.',
       author: {
-        name: 'Ava Kline',
+        name: 'Brian23',
         role: 'Part-time day trader',
         image: avatarImage4,
       },
@@ -42,7 +42,7 @@ const testimonials = [
       content:
         'Love the presets. I clone a receiver, tweak units to pips, and go. Feels like Lego for trading automation.',
       author: {
-        name: 'Priya Seng',
+        name: 'Anna G.',
         role: 'Algo enthusiast',
         image: avatarImage2,
       },
@@ -62,7 +62,7 @@ const testimonials = [
       content:
         'The live reporting is gold. Equity/balance and account changes in real time, plus clean execution logs when I need details.',
       author: {
-        name: 'Marta Kowalski',
+        name: 'QT',
         role: 'Swing trader',
         image: avatarImage4,
       },

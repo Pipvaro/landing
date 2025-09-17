@@ -6,6 +6,7 @@ import { Hero } from '@/components/Hero'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
+import { Slider } from '@/components/Slider'
 import { Testimonials } from '@/components/Testimonials'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <CallToAction />
         <Testimonials />
         <Pricing />
+        <Slider />
         <Faqs />
       </main>
       <Footer />
