@@ -95,6 +95,7 @@ function MobileNavigation() {
         <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
         <MobileNavLink href="#pricing">Pricing</MobileNavLink>
         <MobileNavLink href="#faq">FAQ</MobileNavLink>
+        <MobileNavLink href="/roadmap">Roadmap</MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
         <MobileGetStarted href="https://app.pipvaro.com">Get started / Login</MobileGetStarted>
       </PopoverPanel>
@@ -117,6 +118,7 @@ export function Header() {
               <NavLink href="/#testimonials">Testimonials</NavLink>
               <NavLink href="/#pricing">Pricing</NavLink>
               <NavLink href="/#faq">FAQ</NavLink>
+              <NavLink href="/roadmap">Roadmap</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">

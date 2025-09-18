@@ -3,7 +3,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — Pipvaro',
+  title: 'Pipvaro | Terms of Service',
   description:
     'The terms that govern your use of Pipvaro, including bots, receivers, hosting and billing.',
 }

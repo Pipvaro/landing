@@ -3,7 +3,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Pipvaro',
+  title: 'Pipvaro  Privacy Policy',
   description: 'How Pipvaro collects, uses, and protects your data.',
 }
 
