@@ -16,6 +16,14 @@ export interface SliderProps {
   autoPlay?: boolean;
   interval?: number;
   className?: string;
+  /** Page background color to blend into (hex like #1e2122). */
+  edgeColor?: string;
+  /** Width of the edge fade (desktop), percentage of viewport width. */
+  edgeWidth?: number; // default 18
+  /** Strength of the fade (0..1). */
+  edgeOpacity?: number; // default 0.85
+  /** Enable/disable the edge fade overlays. */
+  edgeFade?: boolean;
 }
 
 function SliderComponent({
@@ -28,6 +36,10 @@ function SliderComponent({
   autoPlay = true,
   interval = 4500,
   className = '',
+  edgeColor = '#1e2122',
+  edgeWidth = 20,
+  edgeOpacity = 0.35,
+  edgeFade = true,
 }: SliderProps) {
   const [index, setIndex] = useState(0);
   const count = images.length;
@@ -47,23 +59,67 @@ function SliderComponent({
 
   const pause = () => {
     isActive.current = false;
-    const id = timerRef.current;
-    if (id) clearInterval(id);
+    if (timerRef.current) clearInterval(timerRef.current);
   };
 
   const resume = () => {
     isActive.current = true;
-    const id = timerRef.current;
-    if (id) clearInterval(id);
-    if (autoPlay) {
-      const newId = setInterval(next, interval);
-      timerRef.current = newId;
-    }
+    if (timerRef.current) clearInterval(timerRef.current);
+    if (autoPlay) timerRef.current = setInterval(next, interval);
   };
 
   const progressStyle = useMemo(
     () => ({ animation: `progress ${interval}ms linear forwards` } as const),
     [interval]
+  );
+
+  // Helpers
+  const toRGBA = (hex: string, a: number) => {
+    const h = hex.replace('#', '');
+    const b = h.length === 3
+      ? h.split('').map((c) => c + c).join('')
+      : h.padEnd(6, '0');
+    const r = parseInt(b.slice(0, 2), 16);
+    const g = parseInt(b.slice(2, 4), 16);
+    const bl = parseInt(b.slice(4, 6), 16);
+    return `rgba(${r}, ${g}, ${bl}, ${Math.min(Math.max(a, 0), 1)})`;
+  };
+
+  const leftFadeStyle = useMemo(
+    () =>
+      ({
+        background: `linear-gradient(to right,
+          ${toRGBA(edgeColor, edgeOpacity)} 0%,
+          ${toRGBA(edgeColor, edgeOpacity * 0.95)} 35%,
+          ${toRGBA(edgeColor, edgeOpacity * 0.6)} 60%,
+          ${toRGBA(edgeColor, 0)} 100%
+        )`,
+        width: `${edgeWidth}vw`,
+      }) as const,
+    [edgeColor, edgeOpacity, edgeWidth]
+  );
+
+  const rightFadeStyle = useMemo(
+    () =>
+      ({
+        background: `linear-gradient(to left,
+          ${toRGBA(edgeColor, edgeOpacity)} 0%,
+          ${toRGBA(edgeColor, edgeOpacity * 0.95)} 35%,
+          ${toRGBA(edgeColor, edgeOpacity * 0.6)} 60%,
+          ${toRGBA(edgeColor, 0)} 100%
+        )`,
+        width: `${edgeWidth}vw`,
+      }) as const,
+    [edgeColor, edgeOpacity, edgeWidth]
+  );
+
+  const bottomVignetteStyle = useMemo(
+    () =>
+      ({
+        background:
+          'radial-gradient(120% 70% at 50% 110%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0) 70%)',
+      }) as const,
+    []
   );
 
   return (
@@ -76,16 +132,16 @@ function SliderComponent({
           onMouseLeave={resume}
           aria-roledescription="carousel"
         >
-          {/* ⬇️ Rahmen entfernt: kein bg, keine ring/shadow */}
-          <div className="overflow-hidden">
+          {/* Viewport */}
+          <div className="relative overflow-hidden">
+            {/* Track */}
             <div
               className="flex transition-transform duration-700 ease-out"
               style={{ transform: `translateX(-${index * 100}%)` }}
             >
               {images.map((img, i) => (
                 <div key={i} className="relative w-full shrink-0 p-0 md:p-2" aria-hidden={index !== i}>
-                  {/* ⬇️ nur runde Ecken + overflow hidden, sonst nix */}
-                  <div className="mx-auto w-full max-w-[520px] aspect-square relative overflow-hidden rounded-2xl">
+                  <div className="mx-auto aspect-square w-full max-w-[520px] overflow-hidden rounded-2xl">
                     <Image
                       src={img.src}
                       alt={img.alt ?? `Slide ${i + 1}`}
@@ -98,6 +154,27 @@ function SliderComponent({
                 </div>
               ))}
             </div>
+
+            {/* Strong edge fades */}
+            {edgeFade && (
+              <>
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-y-0 left-0"
+                  style={leftFadeStyle}
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-y-0 right-0"
+                  style={rightFadeStyle}
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-28"
+                  style={bottomVignetteStyle}
+                />
+              </>
+            )}
           </div>
 
           {/* Indicators */}
@@ -124,19 +201,26 @@ function SliderComponent({
         {/* RIGHT: Text */}
         <div className="text-white">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            <span className='text-[#3f4bf2]'>Get funded.</span> <br></br>Trade with confidence.
+            <span className="text-[#3f4bf2]">Get funded.</span> <br />Trade with confidence.
           </h2>
           <p className="mt-4 text-base text-white/70">
             Want backing from a <span className="underline">prop firm</span>?<br className="hidden sm:block" />
             <span className="mt-3 block">
-              No problem! Our EAs are built to clear evaluations smoothly <br></br>and keep drawdowns low.
+              No problem! Our EAs are built to clear evaluations smoothly <br />and keep drawdowns low.
             </span>
           </p>
         </div>
       </div>
 
       <style jsx>{`
-        @keyframes progress { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+        @keyframes progress {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
+        }
+        /* mobile: etwas breiterer Fade */
+        @media (max-width: 768px) {
+          :global(.edge-w-mobile) { width: ${Math.round(edgeWidth * 1.3)}vw; }
+        }
       `}</style>
     </section>
   );
