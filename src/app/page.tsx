@@ -10,6 +10,7 @@ import { Slider } from '@/components/Slider'
 import { Testimonials } from '@/components/Testimonials'
 import { Steps } from '@/components/Steps' 
 import { Bots } from '@/components/Bots' 
+import { Results } from '@/components/Results'
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         <Slider />
+        <Results />
         <Bots />
         <Faqs />
       </main>
