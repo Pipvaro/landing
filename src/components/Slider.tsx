@@ -124,7 +124,7 @@ function SliderComponent({
         {/* RIGHT: Text */}
         <div className="text-white">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Get funded. <br></br>Trade with confidence.
+            <span className='text-[#3f4bf2]'>Get funded.</span> <br></br>Trade with confidence.
           </h2>
           <p className="mt-4 text-base text-white/70">
             Want backing from a <span className="underline">prop firm</span>?<br className="hidden sm:block" />

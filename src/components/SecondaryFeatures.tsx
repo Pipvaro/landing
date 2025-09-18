@@ -60,22 +60,22 @@ const features: Array<Feature> = [
     description:
       'Set daily/max drawdown %, max open trades (global & per symbol) and time windows around news. Bots pause automatically—rules come first.',
     image: screenshotInventory,
-    icon: function InventoryIcon() {
+    icon: function RiskShieldIcon() {
       return (
         <>
+          {/* Shield */}
           <path
-            opacity=".5"
-            d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
+            d="M18 4 28 8v6c0 7.4-4.6 12.5-10 13.9C12.6 26.5 8 21.4 8 14V8l10-4Z"
             fill="#fff"
+            opacity=".25"
           />
+          {/* Checkmark */}
           <path
-            opacity=".3"
-            d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
-          />
-          <path
-            d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
+            d="M12.5 18.5 16 22l8-8"
+            stroke="#fff"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )
@@ -88,18 +88,17 @@ const features: Array<Feature> = [
     description:
       'Pick fixed or from bot SL/TP, breakeven on TP hit, optional trailing. Choose units (pips/%) and volume per TP, then save as presets for any receiver.',
     image: screenshotContacts,
-    icon: function ContactsIcon() {
+    icon: function RulesSlidersIcon() {
       return (
         <>
-          <path
-            opacity=".5"
-            d="M25.778 25.778c.39.39 1.027.393 1.384-.028A11.952 11.952 0 0 0 30 18c0-6.627-5.373-12-12-12S6 11.373 6 18c0 2.954 1.067 5.659 2.838 7.75.357.421.993.419 1.384.028.39-.39.386-1.02.036-1.448A9.959 9.959 0 0 1 8 18c0-5.523 4.477-10 10-10s10 4.477 10 10a9.959 9.959 0 0 1-2.258 6.33c-.35.427-.354 1.058.036 1.448Z"
-            fill="#fff"
-          />
-          <path
-            d="M12 28.395V28a6 6 0 0 1 12 0v.395A11.945 11.945 0 0 1 18 30c-2.186 0-4.235-.584-6-1.605ZM21 16.5c0-1.933-.5-3.5-3-3.5s-3 1.567-3 3.5 1.343 3.5 3 3.5 3-1.567 3-3.5Z"
-            fill="#fff"
-          />
+          {/* slider rails */}
+          <path d="M6 12h24" stroke="#fff" strokeWidth={2} strokeLinecap="round" opacity=".35" />
+          <path d="M6 18h24" stroke="#fff" strokeWidth={2} strokeLinecap="round" opacity=".35" />
+          <path d="M6 24h24" stroke="#fff" strokeWidth={2} strokeLinecap="round" opacity=".35" />
+          {/* knobs */}
+          <circle cx="14" cy="12" r="2.5" fill="#fff" />
+          <circle cx="24" cy="18" r="2.5" fill="#fff" opacity=".85" />
+          <circle cx="18" cy="24" r="2.5" fill="#fff" opacity=".7" />
         </>
       )
     },
@@ -227,7 +226,7 @@ function FeaturesDesktop() {
 export function SecondaryFeatures() {
   return (
     <section
-    id="features"
+      id="features"
       aria-label="Features for simplifying everyday business tasks"
       className="pt-20 pb-14 sm:pt-32 sm:pb-20 lg:pb-32"
     >
