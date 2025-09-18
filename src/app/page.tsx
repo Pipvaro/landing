@@ -11,6 +11,8 @@ import { Testimonials } from '@/components/Testimonials'
 import { Steps } from '@/components/Steps' 
 import { Bots } from '@/components/Bots' 
 import { Results } from '@/components/Results'
+import Trust from '@/components/Trust'
+
 
 export default function Home() {
   return (
@@ -23,9 +25,10 @@ export default function Home() {
         <Steps />
         <CallToAction />
         <Testimonials />
+        <Trust />
         <Pricing />
         <Slider />
-        <Results />
+        {/* <Results /> */}
         <Bots />
         <Faqs />
       </main>
