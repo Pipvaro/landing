@@ -232,7 +232,7 @@ export default function Roadmap() {
                 />
                 {list.map((item) => (
                   <li key={item.id} className="mb-10 last:mb-0">
-                    <div className="absolute -left-3.5 mt-1">
+                    <div className="absolute -left-3.5 mt-1 translate-x-[3.5px]">
                       <StatusIcon status={item.status} />
                     </div>
                     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:bg-white/[0.05]">
