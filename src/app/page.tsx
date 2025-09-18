@@ -12,6 +12,8 @@ import { Steps } from '@/components/Steps'
 import { Bots } from '@/components/Bots' 
 import { Results } from '@/components/Results'
 import Trust from '@/components/Trust'
+import BackToTop from '@/components/BackToTop';
+
 
 
 export default function Home() {
@@ -21,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <PrimaryFeatures />
+        <BackToTop showAfterId="PrimaryFeatures" />
         <SecondaryFeatures />
         <Steps />
         <CallToAction />
