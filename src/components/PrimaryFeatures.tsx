@@ -6,7 +6,8 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/1.png'
+import backgroundImageDesktop from '@/images/1.png'
+import backgroundImageMobile from '@/images/1-mobile.png'
 import screenshotDashboard from '@/images/screenshots/dummy.png'
 import screenshotAccounts from '@/images/screenshots/dummy.png'
 import screenshotReceivers from '@/images/screenshots/dummy.png'
@@ -40,23 +41,17 @@ const features = [
 ]
 
 export function PrimaryFeatures() {
-  let [tabOrientation, setTabOrientation] = useState<'horizontal' | 'vertical'>(
-    'horizontal',
-  )
+  const [tabOrientation, setTabOrientation] =
+    useState<'horizontal' | 'vertical'>('horizontal')
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
-
+    const lgMediaQuery = window.matchMedia('(min-width: 1024px)')
     function onMediaQueryChange({ matches }: { matches: boolean }) {
       setTabOrientation(matches ? 'vertical' : 'horizontal')
     }
-
     onMediaQueryChange(lgMediaQuery)
     lgMediaQuery.addEventListener('change', onMediaQueryChange)
-
-    return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
-    }
+    return () => lgMediaQuery.removeEventListener('change', onMediaQueryChange)
   }, [])
 
   return (
@@ -65,14 +60,26 @@ export function PrimaryFeatures() {
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
+      {/* Desktop-Hintergrund */}
       <Image
-        className="absolute max-w-none"
-        src={backgroundImage}
+        className="absolute inset-0 hidden lg:block object-cover pointer-events-none select-none"
+        src={backgroundImageDesktop}
         alt=""
-
-        unoptimized
         fill
+        priority
+        sizes="(min-width:1024px) 100vw"
       />
+
+      {/* Mobile-Hintergrund */}
+      <Image
+        className="absolute inset-0 lg:hidden object-cover pointer-events-none select-none"
+        src={backgroundImageMobile}
+        alt=""
+        fill
+        priority
+        sizes="(max-width:1023px) 100vw"
+      />
+
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -82,6 +89,7 @@ export function PrimaryFeatures() {
             Control every bot from one clean console—live P/L, rules, and risk all in one place.
           </p>
         </div>
+
         <TabGroup
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
@@ -127,6 +135,7 @@ export function PrimaryFeatures() {
                   ))}
                 </TabList>
               </div>
+
               <TabPanels className="lg:col-span-7">
                 {features.map((feature) => (
                   <TabPanel key={feature.title} unmount={false}>
