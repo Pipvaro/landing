@@ -44,12 +44,18 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'h-full scroll-smooth bg-[#1e2122] antialiased overflow-x-hidden',
+        'h-full overflow-x-hidden scroll-smooth bg-[#1e2122] antialiased',
         inter.variable,
         lexend.variable,
       )}
     >
-      <body className="flex h-full flex-col">{children}</body>
+      <body className="flex h-full flex-col">
+        {children}
+        <script
+          src="https://widget.nixera.net/widget.js"
+          data-organization-id="org_333WJG9j9bu3PyJkfp3XHfRdbGB"
+        ></script>
+      </body>
     </html>
   )
 }
