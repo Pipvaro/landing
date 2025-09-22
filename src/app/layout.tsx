@@ -1,4 +1,5 @@
 import { type Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 
@@ -11,24 +12,17 @@ export const metadata: Metadata = {
   },
   description:
     'Smarter decisions, seamless execution with Pipvaro across every market.',
-      icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.png', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-icon.png' },
-    ],
-  }
+  icons: {
+    icon: [{ url: '/favicon.ico' }, { url: '/icon.png', type: 'image/png' }],
+    apple: [{ url: '/apple-icon.png' }],
+  },
 }
-
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
 })
-
 const lexend = Lexend({
   subsets: ['latin'],
   display: 'swap',
@@ -51,10 +45,13 @@ export default function RootLayout({
     >
       <body className="flex h-full flex-col">
         {children}
-        <script
+
+        {/* Drittanbieter-Widget korrekt einbinden */}
+        <Script
           src="https://widget.nixera.net/widget.js"
+          strategy="afterInteractive"
           data-organization-id="org_333WJG9j9bu3PyJkfp3XHfRdbGB"
-        ></script>
+        />
       </body>
     </html>
   )
