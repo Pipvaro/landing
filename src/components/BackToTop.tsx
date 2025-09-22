@@ -48,8 +48,8 @@ export default function BackToTop({
       onClick={scrollToTop}
       aria-label="Back to top"
       className={[
-        // position
-        'fixed right-5 bottom-5 z-50',
+        // position (moved to left)
+        'fixed left-5 bottom-5 z-50',
         // size & shape
         'h-12 w-12 rounded-full',
         // brand color (#3f4bf2) + subtle gradient
