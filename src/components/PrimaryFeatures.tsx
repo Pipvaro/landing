@@ -11,7 +11,7 @@ import backgroundImageMobile from '@/images/1-mobile.png'
 import screenshotDashboard from '@/images/screenshots/dummy.png'
 import screenshotAccounts from '@/images/screenshots/dummy.png'
 import screenshotReceivers from '@/images/screenshots/dummy.png'
-import screenshotVatReturns from '@/images/screenshots/dummy.png'
+import screenshotVatReturns from '@/images/screenshots/ecocalendar.png'
 
 const features = [
   {
