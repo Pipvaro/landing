@@ -8,9 +8,9 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import backgroundImageDesktop from '@/images/1.png'
 import backgroundImageMobile from '@/images/1-mobile.png'
-import screenshotDashboard from '@/images/screenshots/dummy.png'
-import screenshotAccounts from '@/images/screenshots/dummy.png'
-import screenshotReceivers from '@/images/screenshots/dummy.png'
+import screenshotDashboard from '@/images/screenshots/ecocalendar.png'
+import screenshotAccounts from '@/images/screenshots/ecocalendar.png'
+import screenshotReceivers from '@/images/screenshots/ecocalendar.png'
 import screenshotVatReturns from '@/images/screenshots/ecocalendar.png'
 
 const features = [
